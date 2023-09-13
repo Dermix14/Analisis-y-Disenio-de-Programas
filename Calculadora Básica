@@ -1,0 +1,33 @@
+n1, n2, choice = 0, 0, 0
+
+def menu():
+    global choice
+    global n1
+    global n2
+    while True:
+        print("Escoja la operación: ")
+        print("1. Suma \n2. Resta \n3. Multiplicación \n4. División \n5. Menú \n6. Salir")
+        choice = int(input())
+        if choice == 5:
+            menu()
+        elif choice == 6:
+            print("Programa finalizado")
+            break
+        n1 = int(input("Introduzca el número 1: "))
+        n2 = int(input("Introduzca el número 2: "))
+        
+        if choice == 1:
+            print("Resultado:", n1 + n2)
+        elif choice == 2:
+            print("Resultado:", n1 - n2)
+        elif choice == 3:
+            print("Resultado:", n1 * n2)
+        elif choice == 4:
+            if n2 == 0:
+                print("Error: No se puede dividir por cero.")
+            else:
+                print("Resultado:", n1 / n2)
+        else:
+            print("Opción no válida.")
+
+menu()
