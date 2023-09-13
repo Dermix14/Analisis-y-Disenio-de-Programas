@@ -1,0 +1,8 @@
+list = [8, 14, 5, 9, 11, 19]
+
+a = int(input("Ingrese un número natural: "))
+
+if a in list:
+    print("El número se encuentra en la lista")
+else:
+    print("El número no se encuentra en la lista")
